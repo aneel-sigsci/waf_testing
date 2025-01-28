@@ -2,7 +2,7 @@
 
 A lightweight tool to test the efficacy of Web Application Firewalls (WAFs) by sending common SQL injection and XSS payloads to a specified target. Results are streamed in real-time to the browser, providing immediate feedback on test execution.
 
-![WAF Testing Tool Interface](images/screenshot.png)
+![WAF Testing Tool Interface](screenshot.png)
 
 ---
 
