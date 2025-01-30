@@ -42,8 +42,6 @@ router.get('/', (req, res) => {
           padding: 1em;
           border-radius: 4px;
           background-color: #fffbe7;
-          overflow-y: auto;
-          max-height: 300px;
         }
         #results h2 {
           margin-top: 0;
@@ -84,6 +82,9 @@ router.get('/', (req, res) => {
             const result = document.createElement('div');
             result.textContent = event.data;
             liveResults.appendChild(result);
+
+            // Auto-scroll to the latest result
+            window.scrollTo(0, document.body.scrollHeight);
           };
 
           eventSource.onerror = function () {
