@@ -22,8 +22,8 @@ A lightweight tool to test the efficacy of Web Application Firewalls (WAFs) by s
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/waf-testing-tool.git
-   cd waf-testing-tool
+   git clone https://github.com/aneel-sigsci/waf_testing.git
+   cd waf-testing
    ```
 
 2. Install dependencies:
