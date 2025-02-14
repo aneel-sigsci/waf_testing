@@ -81,6 +81,21 @@ This tool uses a predefined set of payloads to test the target:
 - `<body onload=alert('XSS')>`
 - `javascript:alert('XSS')`
 
+### Command Injection
+- `; ls -la`
+- `&& whoami`
+- `| id`
+- `|| cat /etc/passwd`
+- ``uname -a``
+- `$(whoami)`
+
+### Directory Traversal
+- `../../../../etc/passwd`
+- `../../../../../etc/shadow`
+- `../../../../../../../../../../windows/system32/config/system`
+- `../../../../../../../../../../boot.ini`
+- `../../../var/log/apache2/access.log`
+
 ---
 
 ## Customization
